@@ -1,0 +1,27 @@
+{:desc-version "0.7"
+ :title ""
+ :status ""
+ :type ["music.cover.utau"]
+ :voicebank {:en ""
+             :ja ""
+             :tc ""}
+ :credits
+ {:original {:by ""
+             :link
+             {:niconico ""
+              :youtube ""}}
+  :ust {:by ""
+        :link
+        {:niconico ""
+         :youtube ""
+         :bowlroll ""}}}
+ :publish
+ {:description
+  {:tc ""
+   :en ""
+   :ja ""}
+  :date ""
+  :link
+  {:youtube ""
+   :niconico ""}}
+ :bpm 0}

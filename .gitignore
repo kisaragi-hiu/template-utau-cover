@@ -1,0 +1,16 @@
+* mix/*
+*.blend1
+*.cache
+*.mkv
+*.mkv
+*.mp3
+*.mp4
+*.ogg
+*.ogg
+*.wav
+*.wav
+*.webm
+*Mix/*
+!*Mix/*.ardour
+!*Mix/*.history
+!*Mix/instant.xml

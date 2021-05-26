@@ -1,0 +1,18 @@
+[#VERSION]
+UST Version1.2
+[#SETTING]
+Tempo=120.00
+Tracks=1
+ProjectName=Main
+VoiceDir=%VOICE%ˆÅ‰¹ƒŒƒ“ƒŠE˜A‘±‰¹Ver1.5
+OutFile=main.wav
+CacheDir=main.cache
+Tool1=wavtool.exe
+Tool2=tool2/tn_fnds.exe
+Mode2=True
+[#0000]
+Length=480
+Lyric=R
+NoteNum=60
+PreUtterance=
+[#TRACKEND]

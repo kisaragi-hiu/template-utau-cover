@@ -1,0 +1,46 @@
+* Template for UTAU covers
+
+** Usage
+
+Some targets:
+
+#+begin_src shell
+make audio
+make video
+#+end_src
+
+Tune in =ust/=. Each ust is rendered into a corresponding wav which you can reference during mixing.
+
+You have to manually make sure the OutFile of every ust shares the same filename, so that for example =main.ust= renders to =main.wav=.
+
+** Setup
+
+#+begin_src shell
+npx degit kisaragi-hiu/template-utau-cover new-project
+#+end_src
+
+Then change this line to point to the right command for UTAU:
+
+#+begin_src makefile
+UTAU = env WINEPREFIX=/home/kisaragi-hiu/.wineprefix/UTAU wine "C:\\Program Files (x86)\\UTAU\\utau.exe"
+#+end_src
+
+** project.edn
+
+This file is in a personal format: see https://gitlab.com/kisaragi-hiu/experiment.project-metadata-format (name subject to change) for more examples.
+
+** Extra stuff
+
+- Trimming the exported file if it doesn't match the video ::
+
+  #+begin_src makefile
+/tmp/trimmed.wav: export.wav
+	ffmpeg -y -i export.wav -ss 500ms /tmp/trimmed.wav
+
+export.mkv: Original.mp4 /tmp/trimmed.wav
+	ffmpeg -y \
+	    -i "$<" -i /tmp/trimmed.wav \
+	    -map "0:v" -map "1:a" \
+	    -c:v copy -c:a aac -b:a 320k \
+	    "$@"
+  #+end_src
